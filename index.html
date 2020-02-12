@@ -190,8 +190,38 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
-          <a href="/archives/%20" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -274,6 +304,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -303,17 +355,15 @@
       
         
           
-            <p>Sometimes we need to interact with Linux through X window from our PC like installing a graphic application. It may be a problem if linux server does not have graphic UI installed. And it is very comon in Linux server. People tends to believe the X window must be installed and be running on remote Linux server. In fact, the server only run the X support libraries so that the GUI application can create GUI on it, then send the actual GUI to any X server on any display. So we can run X server locally and redirect ‘screen’ to our PC.<br>Here we are going to use X11 forwarding to display X window in our PC.</p>
-<h3 id="Install-Xming"><a href="#Install-Xming" class="headerlink" title="Install Xming"></a>Install Xming</h3><h3 id="Configure-Putty"><a href="#Configure-Putty" class="headerlink" title="Configure Putty"></a>Configure Putty</h3><ul>
-<li>In the box under Saved Sessions type name of your Linux server<br><img src="putty-1.jpg" alt=""></li>
-</ul>
-<ul>
-<li>On the left hand side, find the X11 configuration category by double-clicking on SSH and then clicking on X11</li>
-<li>In this window, make sure the box label Enable X11 forwarding is checked<br><img src="putty-2.jpg" alt=""></li>
-</ul>
-<h3 id="Verify"><a href="#Verify" class="headerlink" title="Verify"></a>Verify</h3><p>To test if X is working, enter ‘xclock’. If you can see a new window appear a small clock, Congratulations! You have successfully made it work<br><img src="putty-3.jpg" alt=""></p>
-
-          
+          Sometimes we need to interact with Linux through X window from our PC like installing a graphic application. It may be a problem if linux server does 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -402,6 +452,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -431,15 +503,19 @@
       
         
           
-            <h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a>tail</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tail -300f access.log</span><br></pre></td></tr></table></figure>
+          tail1$ tail -300f access.log
 
-<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ grep ff a.txt</span><br><span class="line">$ grep -rn <span class="string">'ff'</span> /tmp/ --include *.&#123;vm,java&#125;</span><br></pre></td></tr></table></figure>
+grep12$ grep ff a.txt$ grep -rn 'ff' /tmp/ --include *.&#123;vm,java&#125;
 
-<h3 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awk <span class="string">'/aa/ &#123;print&#125;'</span> a.txt <span class="comment">#match aa</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find /usr -atime -1</span><br></pre></td></tr></table></figure>
-
-          
+awk1$ awk '/aa/ &#123;print&#125;' a.txt #ma
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/10/Most-Frequently-Used-Linux-Commands-in-daily-work/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -557,9 +633,16 @@
       
         
           
-            <p>Welcome to my personal blog! I would share some cool stuff maybe just with me. I hope I can insist on it.</p>
+          Welcome to my personal blog! I would share some cool stuff maybe just with me. I hope I can insist on it.
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/09/first-blog/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -637,7 +720,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/%20%7C%7C%20archive">
+                <a href="/archives/%7C%7C%20archive">
               
                   <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
@@ -646,15 +729,24 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -662,6 +754,16 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/gulywwx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -689,25 +791,28 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">gulywwx</span>
 
+
   
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+<div class="powered-by">
+<span id="busuanzi_container_site_uv">
+  Totoal visit <span id="busuanzi_value_site_uv"></span>times
+</span>
+</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
