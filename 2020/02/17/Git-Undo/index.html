@@ -82,12 +82,12 @@
 <meta name="description" content="Git is the most popular version control tool. Easy to learn but hard to master it. This blog is to explain how to cancel your work if there is something wrong with your change no matter where the chan">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Undo">
-<meta property="og:url" content="https://gulywwx.github.io/2020/02/12/Git-Undo/index.html">
+<meta property="og:url" content="https://gulywwx.github.io/2020/02/17/Git-Undo/index.html">
 <meta property="og:site_name" content="Simon bragging">
 <meta property="og:description" content="Git is the most popular version control tool. Easy to learn but hard to master it. This blog is to explain how to cancel your work if there is something wrong with your change no matter where the chan">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-12T11:25:00.000Z">
-<meta property="article:modified_time" content="2020-02-17T10:14:16.680Z">
+<meta property="article:published_time" content="2020-02-17T10:25:00.000Z">
+<meta property="article:modified_time" content="2020-02-17T10:17:42.853Z">
 <meta property="article:author" content="gulywwx">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="https://gulywwx.github.io/2020/02/12/Git-Undo/"/>
+  <link rel="canonical" href="https://gulywwx.github.io/2020/02/17/Git-Undo/"/>
 
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2020/02/12/Git-Undo/">
+    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2020/02/17/Git-Undo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gulywwx">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-12T22:25:00+11:00">
-                2020-02-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-17T21:25:00+11:00">
+                2020-02-17
               </time>
             
 
@@ -358,23 +358,23 @@
 
       
         <p>Git is the most popular version control tool. Easy to learn but hard to master it. This blog is to explain how to cancel your work if there is something wrong with your change no matter where the change you made.</p>
-<h3 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h3><p>git is more complex than other version controll tool becasue it introduces the stage area. There are four area in git world: Working area, Stage, Local Repository and Remote Repository</p>
+<h3 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h3><p>git is more complex than other version control tool because it introduces the stage area. There are four area in git world: Working area, Stage, Local Repository and Remote Repository.</p>
 <h3 id="Check-the-diff"><a href="#Check-the-diff" class="headerlink" title="Check the diff"></a>Check the diff</h3><p>if the change is still in working area and has not yet been added into stage</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure>
 
-<p>if the change has been added and not yet been commit</p>
+<p>if the change has been added and not yet been committed</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git --cached</span><br></pre></td></tr></table></figure>
 
-<p>if the change has been commit and not yet been push to remote</p>
+<p>if the change has been committed and not yet been push to remote</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff master origin/master</span><br></pre></td></tr></table></figure>
 
 <h3 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h3><p>if the change is still in working area and has not yet been added into stage</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout .</span><br></pre></td></tr></table></figure>
 
-<p>if the change has been added and not yet been commit</p>
+<p>if the change has been added and not yet been committed</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reset</span><br><span class="line">$ git checkout .</span><br></pre></td></tr></table></figure>
 
-<p>if the change has been commit and not yet been push to remote</p>
+<p>if the change has been committed and not yet been push to remote</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard origin/master</span><br></pre></td></tr></table></figure>
 
 <p>if the change has been push to remote</p>
@@ -409,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/10/Most-Frequently-Used-Linux-Commands-in-daily-work/" rel="next" title="Most Frequently Used Linux Commands in daily work">
-                <i class="fa fa-chevron-left"></i> Most Frequently Used Linux Commands in daily work
+              <a href="/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/" rel="next" title="Interact with Linux via X windows from PC">
+                <i class="fa fa-chevron-left"></i> Interact with Linux via X windows from PC
               </a>
             
           </div>
@@ -418,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/" rel="prev" title="Interact with Linux via X windows from PC">
-                Interact with Linux via X windows from PC <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
