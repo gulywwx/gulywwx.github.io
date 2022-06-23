@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="LateX," />
 
 
 
@@ -79,22 +79,18 @@
 
 
 
-<meta name="description" content="Sometimes we need to interact with Linux through X window from our PC like installing a graphic application. It may be a problem if linux server does not have graphic UI installed. And it is very como">
+<meta name="description" content="Download &amp; Install TeX Live1$ brew install --cask mactex  Add to PATH12$ vi ~&#x2F;.zshrcexport PATH&#x3D;$PATH:$GOPATH&#x2F;bin:&#x2F;opt&#x2F;homebrew&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;texlive&#x2F;2022&#x2F;bin&#x2F;universal-darwin  Install &amp; Conf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Interact with Linux via X windows from PC">
-<meta property="og:url" content="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/index.html">
+<meta property="og:title" content="Writing LateX in VS Code">
+<meta property="og:url" content="https://gulywwx.github.io/2022/06/24/Writing-LaTeX-in-VS-Code/index.html">
 <meta property="og:site_name" content="Simon bragging">
-<meta property="og:description" content="Sometimes we need to interact with Linux through X window from our PC like installing a graphic application. It may be a problem if linux server does not have graphic UI installed. And it is very como">
+<meta property="og:description" content="Download &amp; Install TeX Live1$ brew install --cask mactex  Add to PATH12$ vi ~&#x2F;.zshrcexport PATH&#x3D;$PATH:$GOPATH&#x2F;bin:&#x2F;opt&#x2F;homebrew&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;texlive&#x2F;2022&#x2F;bin&#x2F;universal-darwin  Install &amp; Conf">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/putty-1.jpg">
-<meta property="og:image" content="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/putty-2.jpg">
-<meta property="og:image" content="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/putty-3.jpg">
-<meta property="article:published_time" content="2020-02-12T11:25:00.000Z">
-<meta property="article:modified_time" content="2020-02-17T09:59:12.868Z">
+<meta property="article:published_time" content="2022-06-24T12:47:47.000Z">
+<meta property="article:modified_time" content="2022-06-23T16:49:39.871Z">
 <meta property="article:author" content="gulywwx">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="LateX">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/putty-1.jpg">
 
 
 
@@ -124,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/"/>
+  <link rel="canonical" href="https://gulywwx.github.io/2022/06/24/Writing-LaTeX-in-VS-Code/"/>
 
 
 
 
 
-  <title>Interact with Linux via X windows from PC | Simon bragging</title>
+  <title>Writing LateX in VS Code | Simon bragging</title>
   
 
 
@@ -267,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2020/02/12/interact-with-Linux-via-X-windows-from-PC-1/">
+    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2022/06/24/Writing-LaTeX-in-VS-Code/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gulywwx">
@@ -284,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Interact with Linux via X windows from PC</h1>
+          <h1 class="post-title" itemprop="name headline">Writing LateX in VS Code</h1>
         
 
         <div class="post-meta">
@@ -296,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-12T22:25:00+11:00">
-                2020-02-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-24T22:47:47+10:00">
+                2022-06-24
               </time>
             
 
@@ -319,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/VS-Code/" itemprop="url" rel="index">
+                    <span itemprop="name">VS Code</span>
                   </a>
                 </span>
 
@@ -361,15 +357,14 @@
       
 
       
-        <p>Sometimes we need to interact with Linux through X window from our PC like installing a graphic application. It may be a problem if linux server does not have graphic UI installed. And it is very comon in Linux server. People tends to believe the X window must be installed and be running on remote Linux server. In fact, the server only run the X support libraries so that the GUI application can create GUI on it, then send the actual GUI to any X server on any display. So we can run X server locally and redirect ‘screen’ to our PC.<br>Here we are going to use X11 forwarding to display X window in our PC.</p>
-<h3 id="Install-Xming"><a href="#Install-Xming" class="headerlink" title="Install Xming"></a>Install Xming</h3><h3 id="Configure-Putty"><a href="#Configure-Putty" class="headerlink" title="Configure Putty"></a>Configure Putty</h3><ul>
-<li>In the box under Saved Sessions type name of your Linux server<br><img src="putty-1.jpg" alt=""></li>
-</ul>
-<ul>
-<li>On the left hand side, find the X11 configuration category by double-clicking on SSH and then clicking on X11</li>
-<li>In this window, make sure the box label Enable X11 forwarding is checked<br><img src="putty-2.jpg" alt=""></li>
-</ul>
-<h3 id="Verify"><a href="#Verify" class="headerlink" title="Verify"></a>Verify</h3><p>To test if X is working, enter ‘xclock’. If you can see a new window appear a small clock, Congratulations! You have successfully made it work<br><img src="putty-3.jpg" alt=""></p>
+        <h3 id="Download-amp-Install-TeX-Live"><a href="#Download-amp-Install-TeX-Live" class="headerlink" title="Download &amp; Install TeX Live"></a>Download &amp; Install TeX Live</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install --cask mactex</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-to-PATH"><a href="#Add-to-PATH" class="headerlink" title="Add to PATH"></a>Add to PATH</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vi ~/.zshrc</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOPATH</span>/bin:/opt/homebrew/bin:/usr/<span class="built_in">local</span>/texlive/2022/bin/universal-darwin</span><br></pre></td></tr></table></figure>
+
+<h3 id="Install-amp-Config-LaTeX-Workshop"><a href="#Install-amp-Config-LaTeX-Workshop" class="headerlink" title="Install &amp; Config LaTeX Workshop"></a>Install &amp; Config LaTeX Workshop</h3><p>install the extension LaTeX Workshop in VS Code. Update the user settings</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">"latex-workshop.latex.autoBuild.run": "never",</span><br><span class="line">  "latex-workshop.latex.tools": [</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">     <span class="attr">"command"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">     <span class="attr">"args"</span>: [</span><br><span class="line">      <span class="string">"-synctex=1"</span>,</span><br><span class="line">      <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">      <span class="string">"-file-line-error"</span>,</span><br><span class="line">      <span class="string">"-pdf"</span>,</span><br><span class="line">      <span class="string">"-outdir=%OUTDIR%"</span>,</span><br><span class="line">      <span class="string">"%DOC%"</span></span><br><span class="line">     ],</span><br><span class="line">     <span class="attr">"env"</span>: &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"xelatex"</span>,</span><br><span class="line">     <span class="attr">"command"</span>: <span class="string">"xelatex"</span>,</span><br><span class="line">     <span class="attr">"args"</span>: [</span><br><span class="line">      <span class="string">"-synctex=1"</span>,</span><br><span class="line">      <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">      <span class="string">"-file-line-error"</span>,</span><br><span class="line">      <span class="string">"%DOC%"</span></span><br><span class="line">     ],</span><br><span class="line">     <span class="attr">"env"</span>: &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"pdflatex"</span>,</span><br><span class="line">     <span class="attr">"command"</span>: <span class="string">"pdflatex"</span>,</span><br><span class="line">     <span class="attr">"args"</span>: [</span><br><span class="line">      <span class="string">"-synctex=1"</span>,</span><br><span class="line">      <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">      <span class="string">"-file-line-error"</span>,</span><br><span class="line">      <span class="string">"%DOC%"</span></span><br><span class="line">     ],</span><br><span class="line">     <span class="attr">"env"</span>: &#123;&#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"bibtex"</span>,</span><br><span class="line">     <span class="attr">"command"</span>: <span class="string">"bibtex"</span>,</span><br><span class="line">     <span class="attr">"args"</span>: [</span><br><span class="line">      <span class="string">"%DOCFILE%"</span></span><br><span class="line">     ],</span><br><span class="line">     <span class="attr">"env"</span>: &#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">   ],</span><br><span class="line">   "latex-workshop.latex.recipes": [</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"pdfLaTeX"</span>,</span><br><span class="line">     <span class="attr">"tools"</span>: [</span><br><span class="line">      <span class="string">"pdflatex"</span></span><br><span class="line">     ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"latexmk 🔃"</span>,</span><br><span class="line">     <span class="attr">"tools"</span>: [</span><br><span class="line">      <span class="string">"latexmk"</span></span><br><span class="line">     ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"xelatex"</span>,</span><br><span class="line">     <span class="attr">"tools"</span>: [</span><br><span class="line">      <span class="string">"xelatex"</span></span><br><span class="line">     ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">     <span class="attr">"name"</span>: <span class="string">"pdflatex ➞ bibtex ➞ pdflatex`×2"</span>,</span><br><span class="line">     <span class="attr">"tools"</span>: [</span><br><span class="line">      <span class="string">"pdflatex"</span>,</span><br><span class="line">      <span class="string">"bibtex"</span>,</span><br><span class="line">      <span class="string">"pdflatex"</span>,</span><br><span class="line">      <span class="string">"pdflatex"</span></span><br><span class="line">     ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"xelatex ➞ bibtex ➞ xelatex`×2"</span>,</span><br><span class="line">    <span class="attr">"tools"</span>: [</span><br><span class="line">      <span class="string">"xelatex"</span>,</span><br><span class="line">      <span class="string">"bibtex"</span>,</span><br><span class="line">      <span class="string">"xelatex"</span>,</span><br><span class="line">      <span class="string">"xelatex"</span></span><br><span class="line">     ]</span><br><span class="line">    &#125;</span><br><span class="line">   ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Write-amp-Compile"><a href="#Write-amp-Compile" class="headerlink" title="Write &amp; Compile"></a>Write &amp; Compile</h3><p>Now you may open a tex file or create a new one. If you want to compile the file, press Ctrl + Alt + B (Windows) or option + cmd + B (macOS). Moreover, you may choose another recipes from the sidebar. There is button in the right top corner to preview PDF file.</p>
 
       
     </div>
@@ -387,7 +382,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/LateX/" rel="tag"># LateX</a>
           
         </div>
       
@@ -400,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/10/Most-Frequently-Used-Linux-Commands-in-daily-work/" rel="next" title="Most Frequently Used Linux Commands in daily work">
-                <i class="fa fa-chevron-left"></i> Most Frequently Used Linux Commands in daily work
+              <a href="/2020/04/11/How-to-Check-for-Open-Ports-in-Linux/" rel="next" title="How to Check for Open Ports in Linux">
+                <i class="fa fa-chevron-left"></i> How to Check for Open Ports in Linux
               </a>
             
           </div>
@@ -409,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/17/Git-Undo/" rel="prev" title="Git Undo">
-                Git Undo <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Xming"><span class="nav-number">1.</span> <span class="nav-text">Install Xming</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configure-Putty"><span class="nav-number">2.</span> <span class="nav-text">Configure Putty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verify"><span class="nav-number">3.</span> <span class="nav-text">Verify</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Download-amp-Install-TeX-Live"><span class="nav-number">1.</span> <span class="nav-text">Download &amp; Install TeX Live</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-to-PATH"><span class="nav-number">2.</span> <span class="nav-text">Add to PATH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-amp-Config-LaTeX-Workshop"><span class="nav-number">3.</span> <span class="nav-text">Install &amp; Config LaTeX Workshop</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Write-amp-Compile"><span class="nav-number">4.</span> <span class="nav-text">Write &amp; Compile</span></a></li></ol></div>
             
 
           </div>
