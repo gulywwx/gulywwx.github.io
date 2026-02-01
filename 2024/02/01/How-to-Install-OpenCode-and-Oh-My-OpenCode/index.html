@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI, Development Tools, OpenCode," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="OpenCode and Oh My OpenCode are powerful AI-powered development tools that enhance coding productivity. This guide walks through the installation process for both tools. What is OpenCode?OpenCode is a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Install OpenCode and Oh My OpenCode">
+<meta property="og:url" content="https://gulywwx.github.io/2024/02/01/How-to-Install-OpenCode-and-Oh-My-OpenCode/index.html">
+<meta property="og:site_name" content="Simon bragging">
+<meta property="og:description" content="OpenCode and Oh My OpenCode are powerful AI-powered development tools that enhance coding productivity. This guide walks through the installation process for both tools. What is OpenCode?OpenCode is a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-01-31T23:00:00.000Z">
+<meta property="article:modified_time" content="2026-02-01T04:51:00.081Z">
+<meta property="article:author" content="gulywwx">
+<meta property="article:tag" content="AI, Development Tools, OpenCode">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://gulywwx.github.io/2024/02/01/How-to-Install-OpenCode-and-Oh-My-OpenCode/"/>
+
+
+
+
+
+  <title>How to Install OpenCode and Oh My OpenCode | Simon bragging</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Simon bragging</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">gulywwx</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2024/02/01/How-to-Install-OpenCode-and-Oh-My-OpenCode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="gulywwx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Simon bragging">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">How to Install OpenCode and Oh My OpenCode</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-02-01T10:00:00+11:00">
+                2024-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/" itemprop="url" rel="index">
+                    <span itemprop="name">DevOps</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>OpenCode and Oh My OpenCode are powerful AI-powered development tools that enhance coding productivity. This guide walks through the installation process for both tools.</p>
+<h3 id="What-is-OpenCode"><a href="#What-is-OpenCode" class="headerlink" title="What is OpenCode?"></a>What is OpenCode?</h3><p>OpenCode is an AI coding assistant that integrates with your development environment to provide intelligent code suggestions, explanations, and automation capabilities. It leverages large language models to understand context and assist with various coding tasks.</p>
+<h3 id="What-is-Oh-My-OpenCode"><a href="#What-is-Oh-My-OpenCode" class="headerlink" title="What is Oh My OpenCode?"></a>What is Oh My OpenCode?</h3><p>Oh My OpenCode is an enhanced framework built on top of OpenCode that provides additional features, customizations, and specialized agents for more complex development workflows. It offers improved orchestration capabilities and advanced tooling.</p>
+<h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>Before installing, ensure you have:</p>
+<ul>
+<li><strong>Node.js</strong>: Version 18.x or higher</li>
+<li><strong>npm</strong> or <strong>yarn</strong>: Latest stable version</li>
+<li><strong>Git</strong>: For cloning repositories</li>
+<li><strong>API Keys</strong>: Access to required AI model providers (OpenAI, Anthropic, etc.)</li>
+<li><strong>Operating System</strong>: macOS, Linux, or Windows with WSL2</li>
+</ul>
+<h3 id="Installing-OpenCode"><a href="#Installing-OpenCode" class="headerlink" title="Installing OpenCode"></a>Installing OpenCode</h3><h4 id="Step-1-Install-via-npm"><a href="#Step-1-Install-via-npm" class="headerlink" title="Step 1: Install via npm"></a>Step 1: Install via npm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @opencode/cli</span><br></pre></td></tr></table></figure>
+
+<p>Or using yarn:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add @opencode/cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-2-Verify-Installation"><a href="#Step-2-Verify-Installation" class="headerlink" title="Step 2: Verify Installation"></a>Step 2: Verify Installation</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opencode --version</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-3-Initialize-Configuration"><a href="#Step-3-Initialize-Configuration" class="headerlink" title="Step 3: Initialize Configuration"></a>Step 3: Initialize Configuration</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opencode init</span><br></pre></td></tr></table></figure>
+
+<p>This creates a configuration file in your home directory (<code>~/.opencode/config.json</code>).</p>
+<h4 id="Step-4-Configure-API-Keys"><a href="#Step-4-Configure-API-Keys" class="headerlink" title="Step 4: Configure API Keys"></a>Step 4: Configure API Keys</h4><p>Edit the configuration file to add your API keys:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opencode config <span class="built_in">set</span> api-key YOUR_API_KEY</span><br></pre></td></tr></table></figure>
+
+<p>Or manually edit <code>~/.opencode/config.json</code>:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"apiKey"</span>: <span class="string">"your-api-key-here"</span>,</span><br><span class="line">  <span class="attr">"model"</span>: <span class="string">"claude-sonnet-4.5"</span>,</span><br><span class="line">  <span class="attr">"provider"</span>: <span class="string">"anthropic"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Installing-Oh-My-OpenCode"><a href="#Installing-Oh-My-OpenCode" class="headerlink" title="Installing Oh My OpenCode"></a>Installing Oh My OpenCode</h3><h4 id="Step-1-Clone-the-Repository"><a href="#Step-1-Clone-the-Repository" class="headerlink" title="Step 1: Clone the Repository"></a>Step 1: Clone the Repository</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/ohmyopencode/ohmyopencode.git</span><br><span class="line"><span class="built_in">cd</span> ohmyopencode</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-2-Install-Dependencies"><a href="#Step-2-Install-Dependencies" class="headerlink" title="Step 2: Install Dependencies"></a>Step 2: Install Dependencies</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-3-Link-Globally-Optional"><a href="#Step-3-Link-Globally-Optional" class="headerlink" title="Step 3: Link Globally (Optional)"></a>Step 3: Link Globally (Optional)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm link</span><br></pre></td></tr></table></figure>
+
+<p>This allows you to use <code>omo</code> command globally.</p>
+<h4 id="Step-4-Configure-Oh-My-OpenCode"><a href="#Step-4-Configure-Oh-My-OpenCode" class="headerlink" title="Step 4: Configure Oh My OpenCode"></a>Step 4: Configure Oh My OpenCode</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">omo init</span><br></pre></td></tr></table></figure>
+
+<p>Follow the interactive prompts to:</p>
+<ul>
+<li>Set up your preferred AI provider</li>
+<li>Configure agent behaviors</li>
+<li>Enable specific skills and plugins</li>
+<li>Set working directories</li>
+</ul>
+<h4 id="Step-5-Install-Additional-Plugins"><a href="#Step-5-Install-Additional-Plugins" class="headerlink" title="Step 5: Install Additional Plugins"></a>Step 5: Install Additional Plugins</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">omo plugin install git-master</span><br><span class="line">omo plugin install frontend-ui-ux</span><br><span class="line">omo plugin install playwright</span><br></pre></td></tr></table></figure>
+
+<h3 id="Verification"><a href="#Verification" class="headerlink" title="Verification"></a>Verification</h3><p>Test your installation:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Test OpenCode</span></span><br><span class="line">opencode chat <span class="string">"Hello, are you working?"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Test Oh My OpenCode</span></span><br><span class="line">omo --version</span><br><span class="line">omo agent list</span><br></pre></td></tr></table></figure>
+
+<h3 id="Common-Installation-Issues"><a href="#Common-Installation-Issues" class="headerlink" title="Common Installation Issues"></a>Common Installation Issues</h3><h4 id="Issue-1-Permission-Denied"><a href="#Issue-1-Permission-Denied" class="headerlink" title="Issue 1: Permission Denied"></a>Issue 1: Permission Denied</h4><p>If you encounter permission errors during global installation:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Use sudo (not recommended for security)</span></span><br><span class="line">sudo npm install -g @opencode/cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># Or fix npm permissions (recommended)</span></span><br><span class="line">mkdir ~/.npm-global</span><br><span class="line">npm config <span class="built_in">set</span> prefix <span class="string">'~/.npm-global'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'export PATH=~/.npm-global/bin:$PATH'</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h4 id="Issue-2-API-Key-Not-Recognized"><a href="#Issue-2-API-Key-Not-Recognized" class="headerlink" title="Issue 2: API Key Not Recognized"></a>Issue 2: API Key Not Recognized</h4><p>Verify your API key is correctly set:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opencode config list</span><br></pre></td></tr></table></figure>
+
+<p>If missing, reconfigure:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opencode config <span class="built_in">set</span> api-key YOUR_ACTUAL_KEY</span><br></pre></td></tr></table></figure>
+
+<h4 id="Issue-3-Node-Version-Mismatch"><a href="#Issue-3-Node-Version-Mismatch" class="headerlink" title="Issue 3: Node Version Mismatch"></a>Issue 3: Node Version Mismatch</h4><p>Check your Node.js version:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<p>If below 18.x, upgrade using nvm:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install 18</span><br><span class="line">nvm use 18</span><br></pre></td></tr></table></figure>
+
+<h4 id="Issue-4-Command-Not-Found-After-Installation"><a href="#Issue-4-Command-Not-Found-After-Installation" class="headerlink" title="Issue 4: Command Not Found After Installation"></a>Issue 4: Command Not Found After Installation</h4><p>Ensure your PATH includes npm global binaries:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line">npm config get prefix</span><br></pre></td></tr></table></figure>
+
+<p>Add to your shell profile if missing:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$(npm config get prefix)</span>/bin:<span class="variable">$PATH</span>"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><h4 id="Basic-OpenCode-Usage"><a href="#Basic-OpenCode-Usage" class="headerlink" title="Basic OpenCode Usage"></a>Basic OpenCode Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Start interactive chat</span></span><br><span class="line">opencode chat</span><br><span class="line"></span><br><span class="line"><span class="comment"># Analyze a file</span></span><br><span class="line">opencode analyze src/index.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># Generate code</span></span><br><span class="line">opencode generate <span class="string">"function to validate email"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Basic-Oh-My-OpenCode-Usage"><a href="#Basic-Oh-My-OpenCode-Usage" class="headerlink" title="Basic Oh My OpenCode Usage"></a>Basic Oh My OpenCode Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Start an interactive session</span></span><br><span class="line">omo</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run specific agent</span></span><br><span class="line">omo run explore <span class="string">"Find authentication implementation"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Execute with specific skill</span></span><br><span class="line">omo --skill git-master <span class="string">"Create atomic commits for my changes"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Configuration-Best-Practices"><a href="#Configuration-Best-Practices" class="headerlink" title="Configuration Best Practices"></a>Configuration Best Practices</h3><h4 id="OpenCode-Configuration"><a href="#OpenCode-Configuration" class="headerlink" title="OpenCode Configuration"></a>OpenCode Configuration</h4><p>Edit <code>~/.opencode/config.json</code>:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"apiKey"</span>: <span class="string">"your-key"</span>,</span><br><span class="line">  <span class="attr">"model"</span>: <span class="string">"claude-sonnet-4.5"</span>,</span><br><span class="line">  <span class="attr">"temperature"</span>: <span class="number">0.7</span>,</span><br><span class="line">  <span class="attr">"maxTokens"</span>: <span class="number">4096</span>,</span><br><span class="line">  <span class="attr">"timeout"</span>: <span class="number">60000</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Oh-My-OpenCode-Configuration"><a href="#Oh-My-OpenCode-Configuration" class="headerlink" title="Oh My OpenCode Configuration"></a>Oh My OpenCode Configuration</h4><p>Edit <code>~/.omo/config.yaml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">agents:</span></span><br><span class="line">  <span class="attr">explore:</span></span><br><span class="line">    <span class="attr">thoroughness:</span> <span class="string">medium</span></span><br><span class="line">  <span class="attr">oracle:</span></span><br><span class="line">    <span class="attr">consultMode:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">skills:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">git-master</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">frontend-ui-ux</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">playwright</span></span><br><span class="line"></span><br><span class="line"><span class="attr">providers:</span></span><br><span class="line">  <span class="attr">anthropic:</span></span><br><span class="line">    <span class="attr">apiKey:</span> <span class="string">$&#123;ANTHROPIC_API_KEY&#125;</span></span><br><span class="line">    <span class="attr">model:</span> <span class="string">claude-sonnet-4.5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Next-Steps"><a href="#Next-Steps" class="headerlink" title="Next Steps"></a>Next Steps</h3><p>After successful installation:</p>
+<ol>
+<li><strong>Explore Documentation</strong>: Visit official docs for advanced features</li>
+<li><strong>Join Community</strong>: Connect with other users for tips and tricks</li>
+<li><strong>Configure Agents</strong>: Customize agent behaviors for your workflow</li>
+<li><strong>Install Skills</strong>: Add specialized skills for your tech stack</li>
+<li><strong>Integrate with IDE</strong>: Set up VS Code or other IDE extensions</li>
+</ol>
+<h3 id="Troubleshooting-Resources"><a href="#Troubleshooting-Resources" class="headerlink" title="Troubleshooting Resources"></a>Troubleshooting Resources</h3><ul>
+<li><strong>Official Documentation</strong>: Check the latest docs for updates</li>
+<li><strong>GitHub Issues</strong>: Search existing issues or report new ones</li>
+<li><strong>Community Forums</strong>: Ask questions and share experiences</li>
+<li><strong>Stack Overflow</strong>: Tagged questions for common problems</li>
+</ul>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>OpenCode and Oh My OpenCode are powerful tools that can significantly enhance your development workflow. With proper installation and configuration, you’ll have AI-powered assistance for coding tasks, architecture decisions, and complex problem-solving.</p>
+<p>Start exploring the capabilities and integrate these tools into your daily development routine for maximum productivity gains.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI-Development-Tools-OpenCode/" rel="tag"># AI, Development Tools, OpenCode</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/06/24/Writing-LaTeX-in-VS-Code/" rel="next" title="Writing LateX in VS Code">
+                <i class="fa fa-chevron-left"></i> Writing LateX in VS Code
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">gulywwx</p>
+              <p class="site-description motion-element" itemprop="description">personal blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/gulywwx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-OpenCode"><span class="nav-number">1.</span> <span class="nav-text">What is OpenCode?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-Oh-My-OpenCode"><span class="nav-number">2.</span> <span class="nav-text">What is Oh My OpenCode?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Prerequisites"><span class="nav-number">3.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installing-OpenCode"><span class="nav-number">4.</span> <span class="nav-text">Installing OpenCode</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-Install-via-npm"><span class="nav-number">4.1.</span> <span class="nav-text">Step 1: Install via npm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-Verify-Installation"><span class="nav-number">4.2.</span> <span class="nav-text">Step 2: Verify Installation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-Initialize-Configuration"><span class="nav-number">4.3.</span> <span class="nav-text">Step 3: Initialize Configuration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-Configure-API-Keys"><span class="nav-number">4.4.</span> <span class="nav-text">Step 4: Configure API Keys</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installing-Oh-My-OpenCode"><span class="nav-number">5.</span> <span class="nav-text">Installing Oh My OpenCode</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-Clone-the-Repository"><span class="nav-number">5.1.</span> <span class="nav-text">Step 1: Clone the Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-Install-Dependencies"><span class="nav-number">5.2.</span> <span class="nav-text">Step 2: Install Dependencies</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-Link-Globally-Optional"><span class="nav-number">5.3.</span> <span class="nav-text">Step 3: Link Globally (Optional)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-Configure-Oh-My-OpenCode"><span class="nav-number">5.4.</span> <span class="nav-text">Step 4: Configure Oh My OpenCode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-5-Install-Additional-Plugins"><span class="nav-number">5.5.</span> <span class="nav-text">Step 5: Install Additional Plugins</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verification"><span class="nav-number">6.</span> <span class="nav-text">Verification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Installation-Issues"><span class="nav-number">7.</span> <span class="nav-text">Common Installation Issues</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Issue-1-Permission-Denied"><span class="nav-number">7.1.</span> <span class="nav-text">Issue 1: Permission Denied</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Issue-2-API-Key-Not-Recognized"><span class="nav-number">7.2.</span> <span class="nav-text">Issue 2: API Key Not Recognized</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Issue-3-Node-Version-Mismatch"><span class="nav-number">7.3.</span> <span class="nav-text">Issue 3: Node Version Mismatch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Issue-4-Command-Not-Found-After-Installation"><span class="nav-number">7.4.</span> <span class="nav-text">Issue 4: Command Not Found After Installation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-Started"><span class="nav-number">8.</span> <span class="nav-text">Getting Started</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic-OpenCode-Usage"><span class="nav-number">8.1.</span> <span class="nav-text">Basic OpenCode Usage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic-Oh-My-OpenCode-Usage"><span class="nav-number">8.2.</span> <span class="nav-text">Basic Oh My OpenCode Usage</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration-Best-Practices"><span class="nav-number">9.</span> <span class="nav-text">Configuration Best Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#OpenCode-Configuration"><span class="nav-number">9.1.</span> <span class="nav-text">OpenCode Configuration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Oh-My-OpenCode-Configuration"><span class="nav-number">9.2.</span> <span class="nav-text">Oh My OpenCode Configuration</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Next-Steps"><span class="nav-number">10.</span> <span class="nav-text">Next Steps</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Troubleshooting-Resources"><span class="nav-number">11.</span> <span class="nav-text">Troubleshooting Resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">12.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gulywwx</span>
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
