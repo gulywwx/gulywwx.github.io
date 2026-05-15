@@ -511,10 +511,10 @@
 <h2 id="TL-DR-When-to-Pick-What"><a href="#TL-DR-When-to-Pick-What" class="headerlink" title="TL;DR &mdash; When to Pick What"></a>TL;DR &mdash; When to Pick What</h2>
 
 <ul>
-<li><strong>&ldquo;I want to restrict Storage/SQL access to my VNet, cheaply&rdquo;</strong> &rarr; Service Endpoints</li>
-<li><strong>&ldquo;I need fully private access with no public IP, works from on-prem&rdquo;</strong> &rarr; Private Endpoints</li>
-<li><strong>&ldquo;I'm exposing my own service to other teams/customers privately&rdquo;</strong> &rarr; Private Link Service</li>
-<li><strong>&ldquo;My App Service needs to call stuff inside my VNet&rdquo;</strong> &rarr; VNet Integration</li>
+<li>&ldquo;I want to restrict Storage/SQL access to my VNet, cheaply&rdquo; &rarr; <strong>Service Endpoints</strong></li>
+<li>&ldquo;I need fully private access with no public IP, works from on-prem&rdquo; &rarr; <strong>Private Endpoints</strong></li>
+<li>&ldquo;I'm exposing my own service to other teams/customers privately&rdquo; &rarr; <strong>Private Link Service</strong></li>
+<li>&ldquo;My App Service needs to call stuff inside my VNet&rdquo; &rarr; <strong>VNet Integration</strong></li>
 </ul>
 
 <p>In practice, most production architectures use Private Endpoints as the default for PaaS access, with VNet Integration layered on for App Service outbound, and Private Link Service only when you're building a shared/SaaS platform.</p>
