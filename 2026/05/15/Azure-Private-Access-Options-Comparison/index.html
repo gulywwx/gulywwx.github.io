@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+  <meta name="keywords" content="Azure,Cloud," />
+
+
+
+
+<meta name="description" content="A practical comparison of Azure private networking options: VNet Service Endpoints, Private Endpoints, Private Link Service, and VNet Integration. When to use each, limitations, and a quick decision m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Azure Private Access Options: Comparison">
+<meta property="og:url" content="https://gulywwx.github.io/2026/05/15/Azure-Private-Access-Options-Comparison/index.html">
+<meta property="og:site_name" content="Simon bragging">
+<meta property="og:description" content="A practical comparison of Azure private networking options: VNet Service Endpoints, Private Endpoints, Private Link Service, and VNet Integration. When to use each, limitations, and a quick decision m">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-14T23:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-15T00:00:00.000Z">
+<meta property="article:author" content="gulywwx">
+<meta property="article:tag" content="Azure">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://gulywwx.github.io/2026/05/15/Azure-Private-Access-Options-Comparison/"/>
+
+
+
+
+  <title>Azure Private Access Options: Comparison | Simon bragging</title>
+  
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Simon bragging</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">gulywwx</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://gulywwx.github.io/2026/05/15/Azure-Private-Access-Options-Comparison/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="gulywwx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Simon bragging">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Azure Private Access Options: Comparison</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2026-05-15T10:00:00+10:00">
+                2026-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cloud/" itemprop="url" rel="index">
+                    <span itemprop="name">Cloud</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>A practical comparison of Azure private networking options: VNet Service Endpoints, Private Endpoints, Private Link Service, and VNet Integration. When to use each, limitations, and a quick decision matrix.</p>
+
+<h2 id="1-VNet-Service-Endpoints"><a href="#1-VNet-Service-Endpoints" class="headerlink" title="1. VNet Service Endpoints"></a>1. VNet Service Endpoints</h2>
+
+<p><strong>What it is:</strong> Extends your VNet's private address space and identity to Azure PaaS services over the Azure backbone network. The service is still accessed via its public IP, but traffic stays on Azure's backbone (never hits the internet).</p>
+
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Enabled at the subnet level</li>
+<li>Azure PaaS resource's firewall is configured to allow traffic only from that subnet</li>
+<li>The PaaS resource still has a public IP &mdash; it's just restricted to your VNet</li>
+</ul>
+
+<p><strong>Use when:</strong></p>
+<ul>
+<li>Simple setup, no DNS changes needed</li>
+<li>You want to restrict access to a PaaS service from specific subnets</li>
+<li>Cost-sensitive (free)</li>
+<li>On-premises access via VPN/ExpressRoute is not required (traffic can't route from on-prem through service endpoints)</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>PaaS resource retains its public IP (some compliance regimes don't allow this)</li>
+<li>Only works from the configured VNet/subnet &mdash; no on-prem reach</li>
+<li>No cross-region support (VNet and PaaS must be in same region, with some exceptions like Storage/SQL paired regions)</li>
+</ul>
+
+<h2 id="2-Azure-Private-Endpoints"><a href="#2-Azure-Private-Endpoints" class="headerlink" title="2. Azure Private Endpoints"></a>2. Azure Private Endpoints</h2>
+
+<p><strong>What it is:</strong> A NIC in your VNet with a private IP from your subnet, mapped to a specific instance of a PaaS resource. Traffic goes entirely over private IP.</p>
+
+<p><strong>How it works:</strong></p>
+<ul>
+<li>Creates a network interface in your subnet with a private IP (e.g., <code>10.0.1.5</code>)</li>
+<li>DNS resolution for the PaaS resource (e.g., <code>mystorageaccount.blob.core.windows.net</code>) resolves to that private IP via Private DNS Zone</li>
+<li>The PaaS resource's public endpoint can be disabled entirely</li>
+</ul>
+
+<p><strong>Use when:</strong></p>
+<ul>
+<li>Compliance requires no public IP on the PaaS resource</li>
+<li>You need access from on-premises via VPN/ExpressRoute (private IP is routable)</li>
+<li>You need cross-region access (Private Endpoint in Region A can connect to PaaS in Region B)</li>
+<li>You need granular access to a specific resource instance (e.g., one specific Storage Account, not all Storage Accounts)</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Costs money (per-hour NIC charge + data processing charge)</li>
+<li>Requires Private DNS Zone configuration (adds complexity)</li>
+<li>NSG support was added later; UDR support has nuances</li>
+</ul>
+
+<h2 id="3-Private-Link-Service"><a href="#3-Private-Link-Service" class="headerlink" title="3. Private Link Service"></a>3. Private Link Service</h2>
+
+<p><strong>What it is:</strong> Lets you expose your own service (behind a Standard Load Balancer) to other consumers via Private Endpoint. This is the provider side of Private Endpoint.</p>
+
+<p><strong>How it works:</strong></p>
+<ul>
+<li>You deploy your app behind a Standard Load Balancer</li>
+<li>You create a Private Link Service attached to that LB</li>
+<li>Consumers in other VNets/subscriptions/tenants create a Private Endpoint that connects to your Private Link Service</li>
+<li>Traffic flows: Consumer VNet &rarr; Private Endpoint &rarr; (Azure backbone) &rarr; Private Link Service &rarr; Your LB &rarr; Your app</li>
+</ul>
+
+<p><strong>Use when:</strong></p>
+<ul>
+<li>You're a service provider (ISV, shared platform team) exposing a service to consumers</li>
+<li>Consumer and provider can be in different VNets, subscriptions, or even AAD tenants</li>
+<li>You want NAT'd connectivity &mdash; consumer doesn't see your internal IPs, you don't see theirs</li>
+<li>SaaS multi-tenant scenarios</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Only works with Standard Load Balancer (not Application Gateway, etc.)</li>
+<li>Provider must approve consumer connections (manual or auto-approval)</li>
+<li>One-directional: consumer initiates, provider receives</li>
+</ul>
+
+<h2 id="4-VNet-Integration-App-Service-Functions"><a href="#4-VNet-Integration-App-Service-Functions" class="headerlink" title="4. VNet Integration (App Service / Functions)"></a>4. VNet Integration (App Service / Functions)</h2>
+
+<p><strong>What it is:</strong> Allows Azure App Service / Functions to make outbound calls into your VNet. The app gets a virtual presence in your subnet.</p>
+
+<p><strong>How it works:</strong></p>
+<ul>
+<li>App Service delegates to a dedicated subnet in your VNet</li>
+<li>Outbound traffic from the app can now reach private resources in the VNet (VMs, Private Endpoints, on-prem via VPN/ER)</li>
+<li>Inbound traffic is NOT affected &mdash; the app still receives traffic via its public endpoint (use Private Endpoint separately for private inbound)</li>
+</ul>
+
+<p><strong>Use when:</strong></p>
+<ul>
+<li>Your App Service / Function needs to call a database, VM, or other resource inside a VNet</li>
+<li>You need outbound access to on-prem resources through VPN/ExpressRoute</li>
+<li>Combined with Private Endpoints: VNet Integration (outbound) + Private Endpoint (inbound) = fully private App Service</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Outbound only &mdash; does not make the app privately accessible (use Private Endpoint for that)</li>
+<li>Requires a dedicated subnet (can't share with VMs or other delegated resources)</li>
+<li>Only for App Service / Functions (not a general-purpose feature)</li>
+</ul>
+
+<h2 id="Quick-Decision-Matrix"><a href="#Quick-Decision-Matrix" class="headerlink" title="Quick Decision Matrix"></a>Quick Decision Matrix</h2>
+
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Service Endpoint</th>
+<th>Private Endpoint</th>
+<th>Private Link Service</th>
+<th>VNet Integration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>VNet &rarr; PaaS</td>
+<td>VNet &rarr; PaaS</td>
+<td>Consumer VNet &rarr; Your service</td>
+<td>App Service &rarr; VNet</td>
+</tr>
+<tr>
+<td>Public IP removed?</td>
+<td>No</td>
+<td>Yes</td>
+<td>N/A (your LB)</td>
+<td>No (outbound only)</td>
+</tr>
+<tr>
+<td>On-prem reachable?</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>N/A (outbound)</td>
+</tr>
+<tr>
+<td>Cross-region?</td>
+<td>Limited</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Same region</td>
+</tr>
+<tr>
+<td>Cross-tenant?</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Free</td>
+<td>~$7.30/mo + data</td>
+<td>~$7.30/mo + data</td>
+<td>Free (or plan-dependent)</td>
+</tr>
+<tr>
+<td>DNS changes needed?</td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (consumer side)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Granularity</td>
+<td>Whole service type per subnet</td>
+<td>Specific resource instance</td>
+<td>Specific service</td>
+<td>Subnet-level</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="TL-DR-When-to-Pick-What"><a href="#TL-DR-When-to-Pick-What" class="headerlink" title="TL;DR &mdash; When to Pick What"></a>TL;DR &mdash; When to Pick What</h2>
+
+<ul>
+<li><strong>&ldquo;I want to restrict Storage/SQL access to my VNet, cheaply&rdquo;</strong> &rarr; Service Endpoints</li>
+<li><strong>&ldquo;I need fully private access with no public IP, works from on-prem&rdquo;</strong> &rarr; Private Endpoints</li>
+<li><strong>&ldquo;I'm exposing my own service to other teams/customers privately&rdquo;</strong> &rarr; Private Link Service</li>
+<li><strong>&ldquo;My App Service needs to call stuff inside my VNet&rdquo;</strong> &rarr; VNet Integration</li>
+</ul>
+
+<p>In practice, most production architectures use Private Endpoints as the default for PaaS access, with VNet Integration layered on for App Service outbound, and Private Link Service only when you're building a shared/SaaS platform.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Azure/" rel="tag"># Azure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/02/01/How-to-Install-OpenCode-and-Oh-My-OpenCode/" rel="next" title="How to Install OpenCode and Oh My OpenCode">
+                <i class="fa fa-chevron-left"></i> How to Install OpenCode and Oh My OpenCode
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">gulywwx</p>
+              <p class="site-description motion-element" itemprop="description">personal blog</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/gulywwx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-VNet-Service-Endpoints"><span class="nav-number">1.</span> <span class="nav-text">1. VNet Service Endpoints</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Azure-Private-Endpoints"><span class="nav-number">2.</span> <span class="nav-text">2. Azure Private Endpoints</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Private-Link-Service"><span class="nav-number">3.</span> <span class="nav-text">3. Private Link Service</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-VNet-Integration-App-Service-Functions"><span class="nav-number">4.</span> <span class="nav-text">4. VNet Integration (App Service / Functions)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Decision-Matrix"><span class="nav-number">5.</span> <span class="nav-text">Quick Decision Matrix</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TL-DR-When-to-Pick-What"><span class="nav-number">6.</span> <span class="nav-text">TL;DR &mdash; When to Pick What</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gulywwx</span>
+
+
+  
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+</body>
+</html>
